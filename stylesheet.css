@@ -1,0 +1,150 @@
+.contain{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+table, th, td{
+    border:2px solid;
+    border-collapse:collapse;
+    font-size:40px;
+    user-select:none;
+}
+
+.minterm{
+    font-size:12px;
+    position: relative;
+    bottom: -10px;
+    right: 2px;
+}
+
+.lines{
+    border-style:hidden;
+}
+
+.label{
+    border-style:hidden;
+    position: relative;
+    z-index:1;
+}
+
+.label.top{
+    border-bottom:2px solid;
+}
+
+.label.left{
+    border-right:2px solid;
+}
+
+.lines{
+    width:28px;
+    height:28px;
+    font-size: 18px;
+    transform: rotate(45deg);
+    line-height: 28px;
+    vertical-align: text-bottom;
+    position: relative;
+    top: 9px;
+    border-style:hidden;
+}
+
+.label{
+	border-style:hidden;
+}
+
+.label.top{
+	border-bottom:2px solid;
+}
+
+.label.left{
+	border-right:2px solid;
+}
+
+.lines:after{
+    content: "";
+    position: absolute;
+    border-top: 2px solid;
+    width: 65px;
+    transform-origin: 0% 0%;
+    top: 25px;
+    left: -6px;
+}
+
+.console{
+    text-align:center;
+}
+
+.lines input{
+    border:none;
+    padding:0;
+    font-size:18px;
+    font-family:serif;
+    text-align:center;
+}
+
+.implicant{
+	position:absolute;
+	border: 2px solid;
+	border-radius:5px;
+	z-index:-1;
+}
+
+.elabel{
+    margin-top:-5px;
+    margin-right:-45px;
+}
+
+/* Center numbers in cells */
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make numbers representing variable inputs smaller */
+.minterm, .value {
+    font-size: 12px;
+}
+
+/* Add space between adjacent numbers labeling the cell */
+.label, .minterm {
+    margin-right: 5px;
+}
+
+/* Customizable way to change the name of the input variables */
+.input-variable {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* Color selection dropdown */
+.color-dropdown {
+    margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+/* Ready to circle button */
+.ready-to-circle-btn {
+    margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+/* OK button */
+.ok-btn {
+    margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+/* Translucent surround effect for grouped cells */
+.implicant {
+    position: relative;
+    z-index: 1;
+}
+
+.implicant::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent; /* Border size and style can be adjusted */
+    border-radius: 5px;
+    pointer-events: none;
+}
